@@ -70,11 +70,6 @@ class Bank:
     def __getattr__(self, item):  # called when there isn't an explicit attribute
         raise AttributeError(f"{item} is not an attribute of the Bank Class")
 
-    # def __setattr__(self, key, value):  # this is called every time an attribute is set!!
-    #     print('called', key)
-    #     if key == "n_accs":
-    #         raise AttributeError(f"n_accs cannot be set")
-
     @property
     def n_accs(self):
         return len(self.accounts)
